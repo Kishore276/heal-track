@@ -32,7 +32,44 @@ Access the app online: [HealTrack on Vercel](https://gfg-hackathon-zeta.vercel.a
 - **Styling**: Tailwind CSS for responsive design
 - **Deployment**: Vercel (web), Expo (mobile)
 
-## 🚀 Getting Started
+## � Project Structure
+
+```
+heal-track-main/
+├── 📱 App.tsx                 # Root Expo app component
+├── 📄 app.json               # Expo app configuration
+├── 📄 eas.json               # Expo Application Services config
+├── 📄 package.json           # Dependencies and scripts
+├── 📄 vite.config.ts         # Vite configuration
+├── 📄 tailwind.config.js     # Tailwind CSS configuration
+├── 📄 tsconfig.json          # TypeScript configuration
+├── 📄 index.html             # HTML entry point
+├── 📄 eslint.config.js       # ESLint configuration
+├── 📄 postcss.config.js      # PostCSS configuration
+├── 📄 LICENSE                # MIT License
+├── 📄 README.md              # Project documentation
+├── 📄 .gitignore             # Git ignore rules
+└── 📂 src/                   # Source code directory
+    ├── 📱 App.tsx            # Main React app component
+    ├── 📱 main.tsx           # Application entry point
+    ├── 🎨 index.css          # Global styles
+    ├── 📝 types.ts           # TypeScript type definitions
+    ├── 📝 vite-env.d.ts      # Vite environment types
+    ├── 📂 components/        # React components
+    │   ├── 👨‍⚕️ DoctorDashboard.tsx   # Doctor interface
+    │   ├── 🔐 Login.tsx              # Authentication component
+    │   └── 👤 PatientDashboard.tsx   # Patient interface
+    ├── 📂 context/           # React context providers
+    │   └── 🔐 AuthContext.tsx        # Authentication context
+    └── 📂 data/              # JSON data files
+        ├── 💡 careTips.json          # Healthcare tips
+        ├── 💬 messages.json          # App messages
+        ├── 🎯 milestones.json        # Health milestones
+        ├── 🧪 tests.json             # Medical tests data
+        └── 👥 users.json             # User data
+```
+
+## �🚀 Getting Started
 
 ### Prerequisites
 

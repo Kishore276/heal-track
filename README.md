@@ -141,10 +141,19 @@ We welcome contributions to HealTrack! Please feel free to submit issues, featur
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## 👥 Team
-
-Built with ❤️ for improving healthcare accessibility and management.
 
 ---
+## Developed By
+
+G.Yuva Kishore Reddy  
+Passionate about AI, automation, and building impactful tech solutions.
+
+## Contact
+
+Email: g.yuvakishorereddy@gmail.com   
+WhatsApp Channel: https://whatsapp.com/channel/0029Vb3la9V7NoZtA1GUI00d
+
+Star this repo if you found it helpful!
+
 
 **HealTrack** - Bridging the gap between patients and healthcare providers through innovative technology.

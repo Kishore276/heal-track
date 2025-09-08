@@ -153,7 +153,7 @@ Passionate about AI, automation, and building impactful tech solutions.
 Email: g.yuvakishorereddy@gmail.com   
 WhatsApp Channel: https://whatsapp.com/channel/0029Vb3la9V7NoZtA1GUI00d
 
-Star this repo if you found it helpful!
+Star⭐ this repo if you found it helpful!
 
 
 **HealTrack** - Bridging the gap between patients and healthcare providers through innovative technology.

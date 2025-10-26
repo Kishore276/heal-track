@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { ProgressBar } from './ProgressBar';
 import milestonesData from '../data/milestones.json';
 import careTipsData from '../data/careTips.json';
 import testsData from '../data/tests.json';
@@ -32,10 +33,14 @@ export const PatientDashboard: React.FC = () => {
     e.preventDefault();
     if (!newMessage.trim()) return;
 
+    const receiverId = Array.isArray(user?.assignedTo) 
+      ? user?.assignedTo[0] 
+      : user?.assignedTo || '';
+
     const message = {
       id: `msg${messagesData.messages.length + 1}`,
       senderId: user?.id || '',
-      receiverId: user?.assignedTo || '',
+      receiverId: receiverId,
       content: newMessage,
       timestamp: new Date().toISOString(),
     };
@@ -52,7 +57,7 @@ export const PatientDashboard: React.FC = () => {
 
   const calculateProgress = () => {
     const completed = patientMilestones.filter((m) => m.completed).length;
-    return (completed / patientMilestones.length) * 100;
+    return patientMilestones.length > 0 ? (completed / patientMilestones.length) * 100 : 0;
   };
 
   return (
@@ -72,6 +77,7 @@ export const PatientDashboard: React.FC = () => {
               <button
                 onClick={logout}
                 className="flex items-center text-gray-700 hover:text-gray-900"
+                aria-label="Logout"
               >
                 <LogOut className="w-5 h-5 mr-1" />
                 Logout
@@ -90,6 +96,7 @@ export const PatientDashboard: React.FC = () => {
                 ? 'bg-indigo-600 text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
+            aria-label="View Progress Tab"
           >
             <ClipboardList className="w-5 h-5 mr-2" />
             Progress
@@ -101,6 +108,7 @@ export const PatientDashboard: React.FC = () => {
                 ? 'bg-indigo-600 text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
+            aria-label="View Chat Tab"
           >
             <MessageSquare className="w-5 h-5 mr-2" />
             Chat
@@ -117,12 +125,7 @@ export const PatientDashboard: React.FC = () => {
                     <span>Overall Progress</span>
                     <span>{Math.round(calculateProgress())}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div
-                      className="bg-green-600 h-2.5 rounded-full"
-                      style={{ width: `${calculateProgress()}%` }}
-                    ></div>
-                  </div>
+                  <ProgressBar progress={calculateProgress()} />
                 </div>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="bg-indigo-50 p-4 rounded-lg">
@@ -172,6 +175,7 @@ export const PatientDashboard: React.FC = () => {
                             ? 'text-green-600 bg-green-100'
                             : 'text-gray-400 bg-gray-200'
                         }`}
+                        aria-label={milestone.completed ? 'Mark as incomplete' : 'Mark as complete'}
                       >
                         <CheckCircle2 className="w-6 h-6" />
                       </button>

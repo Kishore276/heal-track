@@ -84,6 +84,7 @@ export const DoctorDashboard: React.FC = () => {
               <button
                 onClick={logout}
                 className="flex items-center text-gray-700 hover:text-gray-900"
+                aria-label="Logout"
               >
                 <LogOut className="w-5 h-5 mr-1" />
                 Logout
@@ -135,8 +136,9 @@ export const DoctorDashboard: React.FC = () => {
             <h2 className="text-lg font-semibold mb-4">Assign New Test</h2>
             <form onSubmit={handleNewTest} className="space-y-4 mb-8">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Title</label>
+                <label htmlFor="test-title" className="block text-sm font-medium text-gray-700">Title</label>
                 <input
+                  id="test-title"
                   type="text"
                   value={newTest.title}
                   onChange={(e) => setNewTest({ ...newTest, title: e.target.value })}
@@ -145,8 +147,9 @@ export const DoctorDashboard: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Description</label>
+                <label htmlFor="test-description" className="block text-sm font-medium text-gray-700">Description</label>
                 <textarea
+                  id="test-description"
                   value={newTest.description}
                   onChange={(e) => setNewTest({ ...newTest, description: e.target.value })}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -154,8 +157,9 @@ export const DoctorDashboard: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Category</label>
+                <label htmlFor="test-category" className="block text-sm font-medium text-gray-700">Category</label>
                 <select
+                  id="test-category"
                   value={newTest.category}
                   onChange={(e) => setNewTest({ ...newTest, category: e.target.value })}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -168,8 +172,9 @@ export const DoctorDashboard: React.FC = () => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Due Date</label>
+                <label htmlFor="test-duedate" className="block text-sm font-medium text-gray-700">Due Date</label>
                 <input
+                  id="test-duedate"
                   type="date"
                   value={newTest.dueDate}
                   onChange={(e) => setNewTest({ ...newTest, dueDate: e.target.value })}
@@ -229,8 +234,9 @@ export const DoctorDashboard: React.FC = () => {
             <h2 className="text-lg font-semibold mb-4">Add New Care Tip</h2>
             <form onSubmit={handleNewTip} className="space-y-4 mb-8">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Title</label>
+                <label htmlFor="tip-title" className="block text-sm font-medium text-gray-700">Title</label>
                 <input
+                  id="tip-title"
                   type="text"
                   value={newTip.title}
                   onChange={(e) => setNewTip({ ...newTip, title: e.target.value })}
@@ -239,8 +245,9 @@ export const DoctorDashboard: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Description</label>
+                <label htmlFor="tip-description" className="block text-sm font-medium text-gray-700">Description</label>
                 <textarea
+                  id="tip-description"
                   value={newTip.description}
                   onChange={(e) => setNewTip({ ...newTip, description: e.target.value })}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -248,8 +255,9 @@ export const DoctorDashboard: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Category</label>
+                <label htmlFor="tip-category" className="block text-sm font-medium text-gray-700">Category</label>
                 <select
+                  id="tip-category"
                   value={newTip.category}
                   onChange={(e) => setNewTip({ ...newTip, category: e.target.value })}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"

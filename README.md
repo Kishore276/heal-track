@@ -148,7 +148,7 @@ npm run preview
 For testing purposes, you can use the following credentials:
 
 - **Doctor Account**:
-  - Email: `doctor@healtrack.com`
+  - Email: `drsrujan@gmail.com`
   - Password: doctor123
 
 - **Patient Account**:

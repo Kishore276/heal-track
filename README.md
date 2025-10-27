@@ -152,7 +152,7 @@ For testing purposes, you can use the following credentials:
   - Password: doctor123
 
 - **Patient Account**:
-  - Email: `patient@healtrack.com`
+  - Email: `kishore@gmail.com`
   - Password: patient123
 
 ## 🔧 Troubleshooting

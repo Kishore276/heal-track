@@ -153,7 +153,7 @@ For testing purposes, you can use the following credentials:
 
 - **Patient Account**:
   - Email: `kishore@gmail.com`
-  - Password: patient123
+  - Password: Kishore123
 
 ## 🔧 Troubleshooting
 

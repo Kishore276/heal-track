@@ -149,7 +149,7 @@ For testing purposes, you can use the following credentials:
 
 - **Doctor Account**:
   - Email: `drsrujan@gmail.com`
-  - Password: doctor123
+  - Password: srujan123
 
 - **Patient Account**:
   - Email: `kishore@gmail.com`
